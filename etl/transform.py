@@ -6,11 +6,14 @@ class BaseTransformer:
     def transform(self, ifs_raw_data):
         pass
 
+
+class MetadataBaseTransformer:
+
     def transform_metadata(self, ifs_metadata):
         pass
 
 
-class IfsTransformer(BaseTransformer):
+class IfsTransformer(BaseTransformer, MetadataBaseTransformer):
 
     def transform(self, ifs_raw_data):
         df = pd.DataFrame(columns=['indicator', 'time_period', 'value'])

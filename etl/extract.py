@@ -6,11 +6,14 @@ class BaseExtractor:
     def extract(self,  frequency='Q', country='AE'):
         pass
 
+
+class MetadataBaseExtractor:
+
     def extract_metadata(self,  frequency='Q', country='AE'):
         pass
 
 
-class IFSExtractor(BaseExtractor):
+class IFSExtractor(BaseExtractor, MetadataBaseExtractor):
 
     def __init__(self):
         self.url = 'http://dataservices.imf.org/REST/SDMX_JSON.svc/'
